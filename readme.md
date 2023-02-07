@@ -25,11 +25,11 @@ end
 ```
 
 ## Global namespaces
-- [Unreal]()
-- [SOT]()
-- [Utils]()
-- [Draw]()
-- [Memory]()
+- [Unreal](#unreal)
+- [SOT](#sot)
+- [Utils](#utils)
+- [Draw](#draw)
+- [Memory](#memory)
 
 ## Namespaces contents
 
@@ -88,37 +88,37 @@ end
     - GetFullName() : string - Get full name of object
     - SetData(string key, any value) : void - Store some data in the object (currently not work on components)
     - GetData(string key) : any - Get the saved data stored in the object (currently not work on components)
-    - ReadVector2(<u64 | string>) : SOT.Vector2 - Read memory using offset or field name inside this object
-    - ReadVector3(<u64 | string>) : SOT.Vector3 - Same as above
-    - ReadVector4(<u64 | string>) : SOT.Vector4 - Same as above
-    - ReadFloat(<u64 | string>) : float - Same as above
-    - ReadBool(<u64 | string>) : boolean - Same as above
-    - ReadPtr(<u64 | string>) : uint64 - Same as above
-    - ReadRotator(<u64 | string>) : SOT.FRotator - Same as above
+    - ReadVector2(<u64|string>) : SOT.Vector2 - Read memory using offset or field name inside this object
+    - ReadVector3(<u64|string>) : SOT.Vector3 - Same as above
+    - ReadVector4(<u64|string>) : SOT.Vector4 - Same as above
+    - ReadFloat(<u64|string>) : float - Same as above
+    - ReadBool(<u64|string>) : boolean - Same as above
+    - ReadPtr(<u64|string>) : uint64 - Same as above
+    - ReadRotator(<u64|string>) : SOT.FRotator - Same as above
 
 
-- USceneComponent : derived UObject | class
+- USceneComponent | UObject
     - Inherit all contents of UObject, that include the constructor
     - GetPosition() : SOT.Vector3 - Returns position of component in world
     - GetRotation() : SOT.FRotator - Returns rotation of component in world using ComponentToWorld
 
 
-- AActor : derived UObject | class
+- AActor | UObject
     - Inherit all contents of UObject, that include the constructor
     - GetRootComponent() : SOT.USceneComponent
     - GetPosition() : SOT.Vector3 - Return actor position in world
     - GetRotation() : SOT.FRotator - Return actor rotation in world usng SceneComponent::ComponentToWorld
 
 
-- AController : derivd AActor | class
+- AController | AActor
     - Inherit all contents of AActor, that include the constructor
 
 
-- APlayerController : derived AController | class
+- APlayerController | AController
     - Inherit all contents of AController, that include the constructor
 
 
-- APlayerCameraManager : derived UObject | class
+- APlayerCameraManager | UObject
     - Inherit all contents of UObject, that include the constructor
     - GetPosition() : SOT.Vector3 - Returns player camera position in world
     - GetRotation() : SOT.FRtotator - Returns player camera rotation in world
